@@ -1,28 +1,11 @@
 $(document).ready(function() {
-    var dateIterator = function() {
+    var ticker = createTicker(function() {
         return new Date();
-    };
+    });
 
-    var i = 0;
-    var elements = [
-        new Date(2014, 0, 0, 13, 5, 0, 0),
-        new Date(2014, 0, 0, 13, 10, 0, 0),
-        new Date(2014, 0, 0, 13, 15, 0, 0),
-        new Date(2014, 0, 0, 13, 20, 0, 0),
-        new Date(2014, 0, 0, 13, 25, 0, 0),
-        new Date(2014, 0, 0, 13, 30, 0, 0),
-        new Date(2014, 0, 0, 13, 35, 0, 0),
-        new Date(2014, 0, 0, 13, 40, 0, 0),
-        new Date(2014, 0, 0, 13, 45, 0, 0),
-        new Date(2014, 0, 0, 13, 50, 0, 0),
-        new Date(2014, 0, 0, 13, 55, 0, 0),
-        new Date(2014, 0, 0, 13, 0, 0, 0)
-    ];
-    var a = function() {
-        return elements[(i++%elements.length)];
-    };
+    setInterval(ticker, 30000);
 
-    setInterval(createTicker(dateIterator), 3000);
+    ticker();
 });
 
 function createTicker(iterator) {
@@ -35,7 +18,7 @@ function createTicker(iterator) {
         $('.high-ist').addClass('active');
 
         var currentDate = iterator();
-console.log(currentDate);
+
         // hours
         var hours = currentDate.getHours();
         hours = hours % 12;
