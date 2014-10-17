@@ -40,7 +40,6 @@ function createTicker(iterator) {
         } else {
             highlights.push('high-' + nextHour);
         }
-console.log(highlights);
         switch (minutes) {
             case 0:
                 highlights.push('high-uhr');
