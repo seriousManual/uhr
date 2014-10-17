@@ -22,7 +22,7 @@ $(document).ready(function() {
         return elements[(i++%elements.length)];
     };
 
-    setInterval(createTicker(a), 3000);
+    setInterval(createTicker(dateIterator), 3000);
 });
 
 function createTicker(iterator) {
