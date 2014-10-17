@@ -7,7 +7,7 @@ body {
 #container {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 4%;
     height: 100%;
     width: 100%;
 }
@@ -36,5 +36,5 @@ body {
 }
 
 .active {
-    color:#fff;
+    color: #5fe8f1;
 }
