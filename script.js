@@ -31,66 +31,64 @@ function createTicker(iterator) {
         var nextHour = ((hours) % 12) + 1;
 
         var highlights = [];
-        switch(minutes) {
-            case 0:
+        if (minutes < 5) {
+            if (minutes == 0 && hours == 1) {
+                highlights.push('high-ein');
+            } else {
                 highlights.push('high-' + hours);
+            }
+        } else {
+            highlights.push('high-' + nextHour);
+        }
+
+        switch (minutes) {
+            case 0:
                 highlights.push('high-uhr');
                 break;
             case 1:
                 highlights.push('high-prefix-5');
                 highlights.push('high-infix-past');
-                highlights.push('high-' + hours);
                 break;
             case 2:
                 highlights.push('high-prefix-10');
                 highlights.push('high-infix-past');
-                highlights.push('high-' + hours);
                 break;
             case 3:
                 highlights.push('high-prefix-quarter');
                 highlights.push('high-infix-past');
-                highlights.push('high-' + hours);
                 break;
             case 4:
                 highlights.push('high-prefix-20');
                 highlights.push('high-infix-past');
-                highlights.push('high-' + hours);
                 break;
             case 5:
                 highlights.push('high-prefix-5');
                 highlights.push('high-infix-to');
                 highlights.push('high-half');
-                highlights.push('high-' + nextHour);
                 break;
             case 6:
                 highlights.push('high-half');
-                highlights.push('high-' + nextHour);
                 break;
             case 7:
                 highlights.push('high-prefix-5');
                 highlights.push('high-infix-past');
                 highlights.push('high-half');
-                highlights.push('high-' + nextHour);
                 break;
             case 8:
                 highlights.push('high-prefix-10');
                 highlights.push('high-infix-past');
                 highlights.push('high-half');
-                highlights.push('high-' + nextHour);
                 break;
             case 9:
                 highlights.push('high-prefix-quarterto');
-                highlights.push('high-' + nextHour);
                 break;
             case 10:
                 highlights.push('high-prefix-10');
                 highlights.push('high-infix-to');
-                highlights.push('high-' + nextHour);
                 break;
             case 11:
                 highlights.push('high-prefix-5');
                 highlights.push('high-infix-to');
-                highlights.push('high-' + nextHour);
                 break;
         }
 
