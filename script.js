@@ -28,6 +28,8 @@ function createTicker(iterator) {
         var minutes = currentDate.getMinutes();
         minutes = Math.floor(minutes / 5);
 
+        var nextHour = ((hours) % 12) + 1;
+
         var highlights = [];
         switch(minutes) {
             case 0:
@@ -58,37 +60,37 @@ function createTicker(iterator) {
                 highlights.push('high-prefix-5');
                 highlights.push('high-infix-to');
                 highlights.push('high-half');
-                highlights.push('high-' + (hours+1));
+                highlights.push('high-' + nextHour);
                 break;
             case 6:
                 highlights.push('high-half');
-                highlights.push('high-' + (hours+1));
+                highlights.push('high-' + nextHour);
                 break;
             case 7:
                 highlights.push('high-prefix-5');
                 highlights.push('high-infix-past');
                 highlights.push('high-half');
-                highlights.push('high-' + (hours+1));
+                highlights.push('high-' + nextHour);
                 break;
             case 8:
                 highlights.push('high-prefix-10');
                 highlights.push('high-infix-past');
                 highlights.push('high-half');
-                highlights.push('high-' + (hours+1));
+                highlights.push('high-' + nextHour);
                 break;
             case 9:
                 highlights.push('high-prefix-quarterto');
-                highlights.push('high-' + (hours+1));
+                highlights.push('high-' + nextHour);
                 break;
             case 10:
                 highlights.push('high-prefix-10');
                 highlights.push('high-infix-to');
-                highlights.push('high-' + (hours+1));
+                highlights.push('high-' + nextHour);
                 break;
             case 11:
                 highlights.push('high-prefix-5');
                 highlights.push('high-infix-to');
-                highlights.push('high-' + (hours+1));
+                highlights.push('high-' + nextHour);
                 break;
         }
 
