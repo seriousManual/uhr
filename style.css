@@ -1,3 +1,7 @@
+body {
+    background-color:#111;
+}
+
 #container {
     width:600px;
     height:600px;
@@ -10,11 +14,15 @@
 }
 
 .cell {
-    background-color:#777;
+    background-color:#333;
     display:inline-block;
     height:9%;
     width:8%;
     text-align:center;
     color:#fff;
     font-family:sans-serif;
+}
+
+.active {
+    color:#5fe8f1;
 }
