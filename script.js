@@ -23,6 +23,8 @@ function createTicker(iterator) {
         var hours = currentDate.getHours();
         hours = hours % 12;
 
+        if (hours === 0) hours = 12;
+
         var minutes = currentDate.getMinutes();
         minutes = Math.floor(minutes / 5);
 
