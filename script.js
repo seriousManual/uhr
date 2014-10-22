@@ -40,6 +40,7 @@ function createTicker(iterator) {
         } else {
             highlights.push('high-' + nextHour);
         }
+
         switch (minutes) {
             case 0:
                 highlights.push('high-uhr');
@@ -74,9 +75,8 @@ function createTicker(iterator) {
                 highlights.push('high-half');
                 break;
             case 8:
-                highlights.push('high-prefix-10');
-                highlights.push('high-infix-past');
-                highlights.push('high-half');
+                highlights.push('high-prefix-20');
+                highlights.push('high-infix-to');
                 break;
             case 9:
                 highlights.push('high-prefix-quarterto');
